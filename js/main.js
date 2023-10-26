@@ -1,19 +1,20 @@
 //alert
 
-
+//Funciones 
 function generarNumeroAleatorio(min, max) {
     return Math.ceil(Math.random() * (max - min) + min);
 }
+//Variables
 const numeroMin = 1;
 const numeroMax = 30;
 const intentosPermitidos = 5;
-
+//MAS FUNCIONES
 function jugarAdivinanza(numeroMin, numeroMax, intentosPermitidos) {
     let numeroRandom = generarNumeroAleatorio(numeroMin, numeroMax);
     let intentos = 0;
     let nombre = prompt("¡Hola! Bienvenido a mi primer proyecto de JavaScript. Este consiste en una adivinanza. ¿Cuál es tu nombre?");
     let numero;
-
+    //CICLOS
     while (intentos < intentosPermitidos) {
         numero = prompt("Hola " + nombre + ". Ingresa un número del " + numeroMin + " al " + numeroMax + ".");
 
@@ -35,5 +36,5 @@ function jugarAdivinanza(numeroMin, numeroMax, intentosPermitidos) {
 
     alert("Te quedaste sin intentos :(");
 }
-
-jugarAdivinanza(numeroMin, numeroMax, intentosPermitidos);
+//Llamo a la funcion para que empiece el juego
+jugarAdivinanza(numeroMin, numeroMax, intentosPermitidos); 
